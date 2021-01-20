@@ -1,0 +1,19 @@
+Fullstack => backend + frontend
+
+Websites vs Webapps
+Websites : 페이지를 방문하면 컨텐츠를 소비 / 인터랙티브 x
+ex) 뉴스페이지 레딧 
+
+Webapps : 내가 움직이고 클릭 발견 검사 / 인터렉티브 o
+ex) 넷플릭스
+
+wetube - interactive Website
+
+js : 브라우저에 종속되어 있음.
+Node.js : js를 브라우저 밖에서 유저가 사용할 수 있도록 한 것.
+        : 브라우저가 필요없어 모바일 앱, 어플를 만들 수 있음.
+
+node.js use cases
+1. fronted와 backend를 모두 javascript로 만들고 싶을 때
+2. django나 python 등등은 사용법을 미리 알아야함.
+
