@@ -46,3 +46,6 @@ TERMINAL, git commit & push
 1. git add .
 2. git commit -m "commit message"
 3. git push origin master
+
+GET : 정보 전달 x
+POST : 정보 전달 o
