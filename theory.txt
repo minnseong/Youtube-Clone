@@ -49,3 +49,13 @@ TERMINAL, git commit & push
 
 GET : 정보 전달 x
 POST : 정보 전달 o
+
+Babel : 최신의 javascript을 예전의 javascript로 변환
+
+babel 설정방법
+1. npm install @babel/node
+2. @babel/preset-env
+3. npm install @babel/preset-env
+2. npm install @babel/core
+
+nodemon : 서버 재가동을 편리하게 해줌.
