@@ -1,5 +1,4 @@
 01/20 2021
-
 Fullstack => backend + frontend
 
 Websites vs Webapps
@@ -19,5 +18,31 @@ node.js use cases
 1. fronted와 backend를 모두 javascript로 만들고 싶을 때
 2. django나 python 등을 사용할 수 있으나, 처음에 사용법을 잘 익혀야 해서 시간이 걸림.
 
+01/21 2021
+Server = computer => connect internet
+software server = 인터넷에 연결된 한 덩어리 코드, 네트워크
 
+Express.js : node.js로 간단하게 서버를 만들 수 있게 해줌 - very stable 
+framework : 개발자들이 미리 작성한 많은 코드.
 
+npm : node package manager
+json : javascript에서 정보를 담는 방식
+terminal에 npm 실행은 폴더안에 package.json이 있어야 함.
+
+< express install >
+1. index.js 생성 후
+2. terminal에 입력
+- node index.js
+- npm init => package.json 생성
+- npm install express => node_modules, package-lock.json 생성
+
+만약 협업을 할시, index.js와 package.json만 디렉토리에 넣은 후
+- npm install 하면 자동으로 아래를 참조해 설치됨.  
+"dependencies": {
+    "express": "^4.17.1"
+  }
+
+TERMINAL, git commit & push
+1. git add .
+2. git commit -m "commit message"
+3. git push origin master
