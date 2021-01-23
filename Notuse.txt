@@ -1,0 +1,29 @@
+const PORT = 4000
+
+function handleListening() {
+   console.log(`Listening on : http://localhost:${PORT}`);
+}
+// arrow function
+const handleProfile = (req, res) => res.send("You are on my profile!");
+const handleHome = (req, res) => res.send("hello from home");
+
+
+// middleware function : next 사용
+const betweenHome =(req, res, next) => {
+    console.log("Between");
+    next();
+};
+
+// 4000 PORT를 listen 시작시, handleListening function call 
+app.listen(PORT, handleListening);
+
+// app.get home(/) 접근시, handleHome function call
+app.get("/", handleHome);
+app.get("/profile", handleProfile);
+
+userRouter.get("/", (req, res) => res.send("user index"));
+userRouter.get("/edit", (req, res) => res.send("user edit"));
+userRouter.get("/password", (req, res) => res.send("user password"));
+
+// default로 export하지 않음 
+import { userRouter } from "./routers/userRouter";
