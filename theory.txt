@@ -59,3 +59,18 @@ babel 설정방법
 2. npm install @babel/core
 
 nodemon : 서버 재가동을 편리하게 해줌.
+
+01/24
+middleware in express : 처리가 끝날 때까지 연결되어있는 것.
+                      : 유저와 마지막 응답 사이에 존재하는 것
+                      : express에서 모든 함수가 될 수 있음.
+                      : login 여부체크, 파일 전송시 중간에 가르챌 수 있음 
+                      : middleware에서 res.send를 하면 연결을 끊을 수 있음.
+
+-> middleware 순서가 매우 중요
+Morgan : middleware , logging(무슨일이 어디서 일어났는지 기록)에 도움이 됨.
+helmet : middleware, node.js 앱의 보안을 도와줌.
+cookie-parser
+body-parser
+
+router : route의 복잡함을 쪼개주는데 사용한다.
