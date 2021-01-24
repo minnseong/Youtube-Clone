@@ -70,8 +70,8 @@ middleware in express : 처리가 끝날 때까지 연결되어있는 것.
 -> middleware 순서가 매우 중요
 Morgan : middleware , logging(무슨일이 어디서 일어났는지 기록)에 도움이 됨.
 helmet : middleware, node.js 앱의 보안을 도와줌.
-cookie-parser
-body-parser
+cookie-parser : cookie를 전달받아서 사용할 수 있도록 만들어주는 것.
+body-parser : 사용자가 웹사이트로 전달하는 정보들을 검사
 
 router : route의 복잡함을 쪼개주는데 사용한다.
 
@@ -79,3 +79,6 @@ MVC : Model , View , Control - pattern
 - model = data
 - view = how does the data look
 - control = function that looks for the data
+
+01/24
+Pug : express에서 view를 다루는 방식
