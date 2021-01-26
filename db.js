@@ -1,6 +1,6 @@
 export const videos = [
     {
-        id:32493,
+        id: 32493,
         title: 'Video awesome',
         description: ' This is something I love',
         views: 24,
@@ -12,7 +12,7 @@ export const videos = [
         }
     },
     {
-        id:222443,
+        id: 222443,
         title: 'Video Funny',
         description: ' This is something I love',
         views: 24,
@@ -24,7 +24,7 @@ export const videos = [
         }
     },
     {
-        id:22113,
+        id: 22113,
         title: 'Video Super',
         description: ' This is something I love',
         views: 24,
