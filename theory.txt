@@ -82,3 +82,6 @@ MVC : Model , View , Control - pattern
 
 01/24
 Pug : express에서 view를 다루는 방식
+
+01/29
+mongoDB : noSQL, 채팅 만들기에 적합. 빠르고 엄격하지않음

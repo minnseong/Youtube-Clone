@@ -32,6 +32,7 @@ const routes = {
             return USER_DETAIL;
         }
     },
+
     editProfile: EDIT_PROFILE,
     changePassword: CHANGE_PASSWORD,
     videos: VIDEOS,
@@ -43,6 +44,7 @@ const routes = {
             return VIDEO_DETAIL;
         }
     },
+    
     editVideo: EDIT_VIDEO,
     deleteVideo: DELETE_VIDEO
 };
