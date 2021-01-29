@@ -85,3 +85,10 @@ Pug : express에서 view를 다루는 방식
 
 01/29
 mongoDB : noSQL, 채팅 만들기에 적합. 빠르고 엄격하지않음
+
+mongoDB 사용법
+mongo
+use wetube
+show collections
+db.videos.remove({})
+exit
