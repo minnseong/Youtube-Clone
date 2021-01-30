@@ -5,7 +5,7 @@ export const home = async(req, res) => {
     // await 부분이 끝나기전까지 render부분을 실행하지 않을 것
     // error가 생겨도 끝났으니, 다음으로 넘어감
     try {
-        const videos = await Video.find({});
+        const videos = await Video.find({}).sort({'_id' : -1});
         res.render("home", { pageTitle : "Home", videos });
     } catch(error) {
         console.log(error);
@@ -13,11 +13,19 @@ export const home = async(req, res) => {
     }
 };
 
-export const search = (req, res) => {
+export const search = async(req, res) => {
     //const searchingBy = req.query.term;
     const {
         query: { term: searchingBy }
     } = req;
+    let videos = [];
+    try {
+        videos = await Video.find({
+            title: { $regex: searchingBy, $options: "i" }
+        });
+    } catch(error) {
+        console.log(error);
+    }
     res.render("search", { pageTitle : "Seach" , searchingBy, videos});
 };
 
@@ -88,7 +96,7 @@ export const deleteVidoe = async(req, res) => {
 
     try {
         await Video.findByIdAndRemove({ _id: id});
-    } catch(error) {}
+    } catch(error) { console.log(error) }
     res.redirect(routes.home)
 }
 
