@@ -1,8 +1,6 @@
-// config 파일안에서는 server 코드와는 연관시키면 안됨. 100% client code
-
 const path = require("path");
 const autoprefixer = require("autoprefixer");
-const ExtractCSS = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const MODE = process.env.WEBPACK_ENV;
 const ENTRY_FILE = path.resolve(__dirname, "assets", "js", "main.js");
@@ -15,22 +13,33 @@ const config = {
     rules: [
       {
         test: /\.(scss)$/,
-        use: ExtractCSS.extract([
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
           {
             loader: "css-loader"
           },
           {
             loader: "postcss-loader",
             options: {
-              plugin() {
-                return [autoprefixer({ browsers: "cover 99.5%" })];
+              postcssOptions: {
+                plugins: [
+                  [
+                    'autoprefixer',
+                    {
+                      //options
+                      browsers: "cover 99.5%"
+                    },
+                  ]
+                ]
               }
             }
           },
           {
             loader: "sass-loader"
           }
-        ])
+        ]
       }
     ]
   },
@@ -38,7 +47,13 @@ const config = {
     path: OUTPUT_DIR,
     filename: "[name].js"
   },
-  plugins: [new ExtractCSS("styles.css")]
+  plugins: [
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: '[name].css'
+    }),
+  ]
 };
 
 module.exports = config;
