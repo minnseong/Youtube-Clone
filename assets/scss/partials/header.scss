@@ -30,6 +30,11 @@
           margin-right: 15px;
         }
       }
+      a {
+        all: unset;
+        cursor: pointer;
+        color: inherit;
+      }
       form {
         width: 100%;
         input {

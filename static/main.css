@@ -240,6 +240,10 @@ input[type="submit"] {
       text-transform: uppercase; }
       .header .header__wrapper .header__column ul li:not(:last-child) {
         margin-right: 15px; }
+    .header .header__wrapper .header__column a {
+      all: unset;
+      cursor: pointer;
+      color: inherit; }
     .header .header__wrapper .header__column form {
       width: 100%; }
       .header .header__wrapper .header__column form input {
