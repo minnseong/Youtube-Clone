@@ -102,3 +102,16 @@ passport : 쿠키 생성, 브라우저에 저장, 유저에게 해당 쿠키를 
 
 serializeUser : 어떤 정보를 쿠키에게 주느냐 / 어떤 field가 쿠키에 포함될 걸인지 알려주는 역할
 deserializeUser : 어느 사용자인지 어떻게 찾는가
+
+02/06
+<local login>
+uswername과 password를 post방식으로 전달
+-> mongoose가 자동으로 체크
+-> password가 맞다면, passport는 쿠키를 생성
+
+<Github login>
+사용자는 깃헙 웹사이트로 이동 github website (auth)
+github website(auth) -> /auth/github/callback
+passport의 githubLoginCallback 호출 -> 사용자의 profile 같은 정보를 받음.
+          => 조건 한가지 : callback(cb)를 return 해야함. cb(error?, user?)
+          => cb(null, user) -> passport는 쿠키를 만들고, 저장, 브라우저로 전송
