@@ -1,8 +1,8 @@
-import { dnsPrefetchControl } from "helmet";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+
 dotenv.config();
-import "./models/Video";
+
 
 mongoose.connect(
     // dotenv
